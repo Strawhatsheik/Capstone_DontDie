@@ -54,7 +54,7 @@ public class MainMenu extends State {
     picturePA.setToolTipText("A high seas adventure! You have been captured by pirates, can you get out of it alive, matey! Arrghh!!!");
     
     goPA = new JButton(new ImageIcon(("Resources/Main_Menu/buttongo.PNG")));
-    goPA.setBounds(175, 390, 50, 50);
+    goPA.setBounds(525, 390, 50, 50);
     panel.add(goPA);
     //End pirate adventure setup
     
@@ -66,7 +66,7 @@ public class MainMenu extends State {
      pictureJA.setToolTipText("A mysterious and deadly forest awaits! Can you claim the treasure and return???");
     
     goJA = new JButton(new ImageIcon(("Resources/Main_Menu/buttongo.PNG")));
-    goJA.setBounds(525, 390, 50, 50);
+    goJA.setBounds(175, 390, 50, 50);
     panel.add(goJA);
     
     //End jungle adventure setup
@@ -115,7 +115,7 @@ public class MainMenu extends State {
             if (e.getSource() == goJA )
             {//Launch the jungle adventure
                 Jungle jungle = new Jungle();
-                jungle.level1.init();
+               //jungle.level1.init();
                 System.out.println("Jungle button pushed");
             }
             else if (e.getSource() == goPA )

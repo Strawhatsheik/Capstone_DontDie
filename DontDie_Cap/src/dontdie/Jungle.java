@@ -27,13 +27,13 @@ public class Jungle extends State implements ActionListener {
     
      //Variables
     public String boardTitlePA, boardTitleSA, boardTitleJA; //These will depend on  users choice?
-   Button jb1 = new Button((new ImageIcon(("/gem.png"))));
-   Button jb2 = new Button((new ImageIcon(("/gem.png"))));
-   Button jb3 = new Button((new ImageIcon(("/gem.png"))));
-   Button jb2half = new Button((new ImageIcon(("/gem.png"))));
-   Button jb4 = new Button((new ImageIcon(("/gem.png"))));
-  Button giantWin = new Button((new ImageIcon(("/finished.jpg"))));
-   JLabel playerPic = new JLabel(new ImageIcon(("/safari.png")));
+   Button jb1 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
+   Button jb2 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
+   Button jb3 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
+   Button jb2half = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
+   Button jb4 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
+  Button giantWin = new Button((new ImageIcon(("Resources/Jungle_Adv/finished.jpg"))));
+   JLabel playerPic = new JLabel(new ImageIcon(("Resources/Jungle_Adv/safari.png")));
     //TEST
     //Initialize a timer
     //Start timer below in constructor
@@ -76,9 +76,9 @@ public class Jungle extends State implements ActionListener {
    level1.setBadChoiceConsequence("Bah, who needs to slow down? You’ve got the treasure, you might as well rush home for the big cash prize and fame! You can see things later, once you’re going all over the world, after all. But what was that noise..? As you can hear your footsteps echo, a rumbling joins the unnerving chorus- and before you can react, a rock has fallen and taken you down with it. Drat, and you almost had all that fame and fortune!");  
  
    //The paths to the pictures
-   level1.setPicPathMain("/jungle1.jpg");
-    level1.setPicPathGood("/phew.jpg");
-    level1.setPicPathBad("/rocktemple.jpg");
+   level1.setPicPathMain("Resources/Jungle_Adv/jungle1.jpg");
+    level1.setPicPathGood("Resources/Jungle_Adv/phew.jpg");
+    level1.setPicPathBad("Resources/Jungle_Adv/rocktemple.jpg");
     
     //The text to be displayed on the buttons called by subInits
    level1.setGoodChoiceSub("Patience is a virtue!");
@@ -143,7 +143,7 @@ public class Jungle extends State implements ActionListener {
     panel.add(playerPic);  
     
      //background picture
-    JLabel pictureJungleBackground = new JLabel(new ImageIcon(("/JUNGLE2.jpg")));
+    JLabel pictureJungleBackground = new JLabel(new ImageIcon(("Resources/Jungle_Adv/JUNGLE2.jpg")));
     pictureJungleBackground.setBounds(0, 0, 800, 800);
     panel.add(pictureJungleBackground);
    
@@ -368,7 +368,7 @@ public class Jungle extends State implements ActionListener {
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     JLabel jMainPic;
     //Add the main event picture space 
-     jMainPic = new JLabel(new ImageIcon(("/us.jpg")));
+     jMainPic = new JLabel(new ImageIcon(("Resources/Main_Menu/us.jpg")));
     jMainPic.setBounds(200, 0, 400, 400);
     panel.add(jMainPic);
     

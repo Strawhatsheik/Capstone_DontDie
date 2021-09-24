@@ -33,11 +33,11 @@ public class Pirates extends State implements ActionListener {
    Button pb3half = new Button((new ImageIcon(("Resources/Pirates_Adv/flagsm.png"))));
    Button pb4 = new Button((new ImageIcon(("Resources/Pirates_Adv/flagsm.png"))));
    Button pb5 = new Button((new ImageIcon(("Resources/Pirates_Adv/flagsm.png"))));
-   Button pb6 = new Button((new ImageIcon(("/flagsm.png"))));
-   Button pb7 = new Button((new ImageIcon(("/flagsm.png"))));
-   Button pb8 = new Button((new ImageIcon(("/flagsm.png"))));
-   Button giantWin = new Button((new ImageIcon(("/Happy.jpg"))));
-   JLabel playerPic = new JLabel(new ImageIcon(("/fig1.png")));
+   Button pb6 = new Button((new ImageIcon(("Resources/Pirates_Adv/flagsm.png"))));
+   Button pb7 = new Button((new ImageIcon(("Resources/Pirates_Adv/flagsm.png"))));
+   Button pb8 = new Button((new ImageIcon(("Resources/Pirates_Adv/flagsm.png"))));
+   Button giantWin = new Button((new ImageIcon(("Resources/Pirates_Adv/Happy.jpg"))));
+   JLabel playerPic = new JLabel(new ImageIcon(("Resources/Pirates_Adv/fig1.png")));
     //TEST
     //Initialize a timer
     //Start timer below in constructor
@@ -70,7 +70,7 @@ public class Pirates extends State implements ActionListener {
       //Construct the board
     public Pirates() {
         
-        super("A Space Adventure!");
+        super("A Pirate Adventure!");
        
         this.tm = new Timer(1, this);
        
@@ -175,13 +175,13 @@ public class Pirates extends State implements ActionListener {
    pb3.addActionListener(bh);
    pb3half.addActionListener(bh);
    pb4.addActionListener(bh);
-   pb5  .addActionListener(bh);
+   pb5.addActionListener(bh);
    
    
     panel.add(playerPic);  
     
      //background picture
-    JLabel picturePirateBackground = new JLabel(new ImageIcon(("Resources/Pirates_Adv/Pirates800.png")));
+    JLabel picturePirateBackground = new JLabel(new ImageIcon(("Resources/Pirates_Adv/pirates800.png")));
     picturePirateBackground.setBounds(0, 0, 800, 800);
     panel.add(picturePirateBackground);
    
