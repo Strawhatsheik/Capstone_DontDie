@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -26,7 +27,7 @@ import javax.swing.Timer;
 public class Jungle extends State implements ActionListener {
     
      //Variables
-    public String boardTitlePA, boardTitleSA, boardTitleJA; //These will depend on  users choice?
+    public String boardTitlePA, boardTitleSA, boardTitleJA, playerName, mainString; //These will depend on  users choice?
    Button jb1 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
    Button jb2 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
    Button jb3 = new Button((new ImageIcon(("Resources/Jungle_Adv/gem.png"))));
@@ -41,7 +42,7 @@ public class Jungle extends State implements ActionListener {
    Timer tm;
     
       //Initialize the player character
-   Adventurer adventurer = new Adventurer("Jim");
+   Adventurer adventurer = new Adventurer("Starter");
    
    //Initializes the scenarios for use on this board   
   //Scenario level1;
@@ -62,12 +63,17 @@ public class Jungle extends State implements ActionListener {
        
         this.tm = new Timer(10, this);
        
-//
+        //retrieve player input for their adventurer's name
+       adventurer.setName(JOptionPane.showInputDialog("What is your name brave adventurer? "));
+          //set the entered name
+      playerName = adventurer.getName();
+   //prepare string for main event. Only needs to be done here to add player name
+          mainString =("You are ")+ playerName +(", and it's been three long months on this expedition- you’re a bit new to the business of exploring and treasure hunting, and it hasn’t been easy. But you’ve hit it big! You just know this find will let your career as an explore take off! As you clutch the gold amulet, orange-gold light glimmers in the large piece of amber embedded in it. It almost seems magical…\"\n" +
+"  + \"But there’s no time to waste just staring at it! You’ve got to get out of this temple and head home, it will do you no good if you never bring back your discovery. Though this place is awful old… You feel compelled to just run out from sheer excitement, but keeping that in mind, maybe you should be careful… \n" );
       tm.start();
        //Prepares the starting scenario for use on this board  
     //The text for the main event
-   level1.setMainEvent("It’s been three long months on this expedition- you’re a bit new to the business of exploring and treasure hunting, and it hasn’t been easy. But you’ve hit it big! You just know this find will let your career as an explore take off! As you clutch the gold amulet, orange-gold light glimmers in the large piece of amber embedded in it. It almost seems magical…"
-    + "But there’s no time to waste just staring at it! You’ve got to get out of this temple and head home, it will do you no good if you never bring back your discovery. Though this place is awful old… You feel compelled to just run out from sheer excitement, but keeping that in mind, maybe you should be careful…");  
+   level1.setMainEvent(mainString);
    //The text for the buttons in level
    level1.setGoodChoice("Take your time.");
    level1.setBadChoice("Run ahead!");

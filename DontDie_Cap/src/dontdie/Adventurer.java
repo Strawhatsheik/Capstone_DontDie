@@ -16,9 +16,11 @@ public class Adventurer {
 public String name = "";
 //These re values to keep track of the players status. They start as true because the player starts
 //whole and healthy
-public Boolean arm = true, leg = true, eye = true, compass = false, rope = false;
+//Also try adding life variable to signal game over? 
+public Boolean arm = true, leg = true, eye = true, compass = false, rope = false, alive = true;
 //The players x and y co-ordinates for moving him on board
 public int xCo, yCo; //For x co-ordinate and y co-ordinate.
+
 
 //Constructor
 public Adventurer(String name)
@@ -93,4 +95,13 @@ public void setRopeFalse()
 //For compass, getter method
 public Boolean getRopeStatus()
 {return rope;}
+
+//Life variables
+//For life, setter method
+public void setLifeFalse()
+{this.alive = false;}
+
+//For life, getter method
+public Boolean getLifeStatus()
+{return alive;}
 }

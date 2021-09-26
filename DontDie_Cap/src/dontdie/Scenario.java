@@ -328,7 +328,9 @@ panel.add(areaScrollPane);
    //Make all the additions visible
     setVisible(true);//Makes visible
   // this.dispose();
-     Space menu = new Space();
+  // MainMenu menu = new MainMenu();
+//    Space menu = new Space();
+   //this.adventurer.setLifeStatus() == false;
     
   }
      
@@ -421,6 +423,8 @@ panel.add(areaScrollPane);
             else if (e.getSource() == badChoiceButton)
             { Scenario.this.initBad();
         Scenario.this.setAPBad(true);
+            //the player has died, open main menu
+             MainMenu menu = new MainMenu();
             }
              else if (e.getSource() == uglyChoiceButton)
             { Scenario.this.initUgly();

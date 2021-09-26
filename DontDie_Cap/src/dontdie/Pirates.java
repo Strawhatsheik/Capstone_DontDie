@@ -249,11 +249,12 @@ public class Pirates extends State implements ActionListener {
   
       //Checks status of players choices in level 2 and enables the 
       //nextlevel accordingly
-      if (pb2.isEnabled() == true)
+      if (pb2.isEnabled() == true){
       {if (level2.getAPUgly() == true)
       {pb4.setEnabled(true);}
       else if (level2.getAPGood() == true)
       {pb3.setEnabled(true);}
+      }
       }
        }
     }
@@ -276,7 +277,7 @@ public class Pirates extends State implements ActionListener {
             }//End level one
             
             //Level 2
-            //You canbe an adventurer who resisted and lost a hand
+            //You can be an adventurer who resisted and lost a hand
             //Or agreed and has both hands
             else if (e.getSource() == pb2 )
             {//Checks what path was picked and removes hand if the ugly path was picked
@@ -347,7 +348,7 @@ public class Pirates extends State implements ActionListener {
             
             }//end level 2
         
-            //LEvel thre.
+            //LEvel three.
             //This level is optional, either adventuerer, missing hand or not, 
             //can access. It leads to level 3half
         else if (e.getSource() == pb3 )
@@ -415,15 +416,16 @@ public class Pirates extends State implements ActionListener {
         {//The text for the main event
     level3half.setMainEvent("Who knows when a rope will come in handy? You run for the rope, coiling it tightly enough around your thigh to allow you to roll your baggy trousers down over it. It’s a little difficult with just the one hand, but…There! No one would know a thing looking at you. Now what?"); 
     //The text for the buttons in level
-    level3half.setUglyChoice("Dig through the book for information on Wormwood");
+    level3half.setGoodChoice("Get out!!!");
     level3half.setBadChoice("Investigate some more");
     //The text for the consequences that will be displayed:
     
     level3half.setBadChoiceConsequence("Prize secured, you turn around and consider the room again. You can’t make much sense of the map not knowing where you are now, but finding Woodworm on it would certainly aid your escape…but there’s no way to steal that...then there’s the wide selection of weapons in the room. Now one of THOSE would certainly be a blessing. Especially given your handicapped state… Yes, that would be the wisest course, you decide. Something small…you need something small, that you can conceal easily, perhaps a dagger, a small knife! \n" +
 "As you set to your search you hear a loud, triumphant shout from the men and some footsteps. Oh no! Are they disbanding? You’ve got to go! You leap to your feet and run for the door. You peer through the keyhole, but all you see is a blur of brown and—the creak of the door isn’t enough of a warning before it is opened right into your face. With an undignified sort of “Bleack!” sound of surprise your rammed by the door and knocked back onto your bottom with a bleeding nose….alas in their excitement it seems the captain and his entourage opened the door with quite some gusto. They are gathered around you, staring down at the floor in shock, and, to his credit, the incredulous captain even asks you what you were doing. Had it not been for the stolen rope on your person you may have been able to pass off some tale of cleaning…\n" +
 "Buuuuut since the captain had not requested you clean his chambers, and you were found with pilfered goods, he instead has you stripped and flung overboard. So much for THAT plan….");  
-    level3half.setUglyChoiceConsequence("Now you’ve got a resource to help you escape….but you still need information! You run back to the desk and sit down on the edge of the captain’s seat, quickly opening the book before you. You hurriedly open the captain’s log and begin flipping. It can’t be too far back, you’ve only been on board a week or two. You flip the pages, scanning the captain’s neat, trim writing for mention of your town. If you can back track the ship’s journey you can find your way back! As you set to your search you hear a loud, triumphant shout from the men and some footsteps. Oh no! Are they disbanding? You’ve got to go! You leap to your feet and run for the door. You peer through the keyhole, but it is as you fear. Men are beginning to return to their positions, and as you quickly crack open the door and make a run for your mop…you are spotted leaving the captain’s chambers. The way this particular pirate sees it…there’s no reason for the scullery worker to be in the captain’s cabin at all….and you are promptly brought before him. \n" +
-"It seems the captain is not in an indulgent mood. It is put forward that your foot could be cut off as punishment, and to put a damper on your wandering, but he rules that you will be too much of a burden, missing a hand and a foot, and has you tossed into the sea instead.");
+    level3half.setGoodChoiceConsequence("Your theft concealed, you run for the door and peer through the keyhole. The other side looks clear, you should be able to get out without being seen. It may have been tempting to stay, or to try and take two prizes, but a ship is a small place, not much goes unseen and you have a very small window to get in and out of this room safely! You’re not leaving empty handed, and you’re getting out alive! You hurriedly shut the door behind you and run for your mop. You try to look as calm as possible, try to return to your work as you hear a loud, triumphant shout from the men and then they, very merrily, seem to begin disbanding. \n" +
+"Wheeeew….you made it out just in time. You scrub the floor, keeping your eyes down and trying not to look the least bit suspicious, but you still catch your breath when you see the captain return to his chambers. You’ve never been so relieved in your life to hear the cook when he shouts up for you to come help prepare dinner….you run below deck happily, very glad to put some distance between yourself and your act of desperation fueled bravery.\n" +
+"….although you still sleep uneasily that night.   ");
     //The paths to the pictures
     level3half.setPicPathMain("Resources/Pirates_Adv/norope.jpg");
      level3half.setPicPathGood("Resources/Pirates_Adv/scrub.jpg");
@@ -436,16 +438,19 @@ public class Pirates extends State implements ActionListener {
         }
         else if (level3.getAPGood() == true) //Tey chose the compass
         {//The text for the main event
-    level3half.setMainEvent(""); 
+    level3half.setMainEvent("A sense of direction never hurt a shanghaied slave, and with all his other marine tools, you doubt he’ll miss it, probably has quite a few. You snatch the compass and bury it in your baggy trousers, puffing up your shirt a bit to cover any bulge. There, no one would know a thing looking at you. Now what?"); 
     //The text for the buttons in level
     level3half.setUglyChoice("Dig through the book for information on Wormwood");
     level3half.setBadChoice("Investigate some more");
     //The text for the consequences that will be displayed:
     
-    level3half.setBadChoiceConsequence("");  
-    level3half.setUglyChoiceConsequence("");
+    level3half.setBadChoiceConsequence("Prize secured, you turn around and consider the room again. You can’t make much sense of the map not knowing where you are now, but finding Woodworm on it would certainly aid your escape…but there’s no way to steal that...then there’s the wide selection of weapons in the room. Now one of THOSE would certainly be a blessing. Especially given your handicapped state… Yes, that would be the wisest course, you decide. Something small…you need something small, that you can conceal easily, perhaps a dagger, a small knife! \n" +
+"As you set to your search you hear a loud, triumphant shout from the men and some footsteps. Oh no! Are they disbanding? You’ve got to go! You leap to your feet and run for the door. You peer through the keyhole, but all you see is a blur of brown and—the creak of the door isn’t enough of a warning before it is opened right into your face. With an undignified sort of “Bleack!” sound of surprise your rammed by the door and knocked back onto your bottom with a bleeding nose….alas in their excitement it seems the captain and his entourage opened the door with quite some gusto. They are gathered around you, staring down at the floor in shock, and, to his credit, the incredulous captain even asks you what you were doing. Had it not been for the stolen rope on your person you may have been able to pass off some tale of cleaning…\n" +
+"Buuuuut since the captain had not requested you clean his chambers, and you were found with pilfered goods, he instead has you stripped and flung overboard. So much for THAT plan….");  
+    level3half.setUglyChoiceConsequence("Now you’ve got a resource to help you escape….but you still need information! You run back to the desk and sit down on the edge of the captain’s seat, quickly opening the book before you. You hurriedly open the captain’s log and begin flipping. It can’t be too far back, you’ve only been on board a week or two. You flip the pages, scanning the captain’s neat, trim writing for mention of your town. If you can back track the ship’s journey you can find your way back! As you set to your search you hear a loud, triumphant shout from the men and some footsteps. Oh no! Are they disbanding? You’ve got to go! You leap to your feet and run for the door. You peer through the keyhole, but it is as you fear. Men are beginning to return to their positions, and as you quickly crack open the door and make a run for your mop…you are spotted leaving the captain’s chambers. The way this particular pirate sees it…there’s no reason for the scullery worker to be in the captain’s cabin at all….and you are promptly brought before him. \n" +
+"It seems the captain is not in an indulgent mood. It is put forward that your foot could be cut off as punishment, and to put a damper on your wandering, but he rules that you will be too much of a burden, missing a hand and a foot, and has you tossed into the sea instead.");
     //The paths to the pictures
-    level3half.setPicPathMain("Resources/Pirates_Adv/nocompass.jpg");
+    level3half.setPicPathMain("Resources/Pirates_Adv/norope.jpg");
      level3half.setPicPathGood("Resources/Pirates_Adv/scrub.jpg");
      level3half.setPicPathBad("Resources/Pirates_Adv/naked.jpg");
      level3half.setPicPathUgly("Resources/Pirates_Adv/naked.jpg");
@@ -466,6 +471,41 @@ public class Pirates extends State implements ActionListener {
     }
     
             }
+            
+            //Begin level four??
+            //////////////////////////////////////////////////////////
+            
+            //Level 4
+            //You 
+            else if (e.getSource() == pb4 )
+            {
+//The text for the main event
+   level4.setMainEvent("");  
+   //The text for the buttons in level
+   level4.setGoodChoice(".");
+   level4.setUglyChoice("");
+   //The text for the consequences that will be displayed:
+   level4.setGoodChoiceConsequence("") ;
+   level4.setUglyChoiceConsequence("");
+   //The paths to the pictures
+   level4.setPicPathMain("Resources/Pirates_Adv/");
+    level4.setPicPathGood("Resources/Pirates_Adv/");
+    level4.setPicPathUgly("Resources/Pirates_Adv/");
+    
+    //The text to be displayed on the buttons called by subInits
+   level4.setGoodChoiceSub("Onwards!");
+   level4.setUglyChoiceSub("You seem close...");
+    
+    //Initialize the level
+    level4.init();
+    //Enable button for next level
+  pb5.setEnabled(true);
+//Make this level no longer accessable   
+    pb4.setEnabled(false);
+            
+            }//end level 4
+            
+            
         }
         
         

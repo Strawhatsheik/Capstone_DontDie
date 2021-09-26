@@ -47,6 +47,8 @@ public class MainMenu extends State {
     panel.add(pic);
     
     //Start pirates setup
+   /*Take priate out for now
+
     JLabel picturePA = new JLabel(new ImageIcon(("Resources/Pirates_Adv/PIRATES.png")));
     picturePA.setBounds(400, 195, 300, 188);
     panel.add(picturePA);
@@ -56,30 +58,35 @@ public class MainMenu extends State {
     goPA = new JButton(new ImageIcon(("Resources/Main_Menu/buttongo.PNG")));
     goPA.setBounds(525, 390, 50, 50);
     panel.add(goPA);
+    */
     //End pirate adventure setup
     
     //Start jungle adventure setup
     JLabel pictureJA = new JLabel(new ImageIcon("Resources/Jungle_Adv/JUNGLE.png"));
-    pictureJA.setBounds(50, 195, 300, 188);
+    //Change to 225 from 50
+    pictureJA.setBounds(225, 195, 300, 188);
     panel.add(pictureJA);
     //Tooltip to talk about adventure
-     pictureJA.setToolTipText("A mysterious and deadly forest awaits! Can you claim the treasure and return???");
+     pictureJA.setToolTipText("A mysterious and deadly forest awaits! Can you claim the treasure and return??? An easy adventure for beginners.");
     
     goJA = new JButton(new ImageIcon(("Resources/Main_Menu/buttongo.PNG")));
-    goJA.setBounds(175, 390, 50, 50);
+     //Change to 350 from 50
+    goJA.setBounds(350, 390, 50, 50);
     panel.add(goJA);
     
     //End jungle adventure setup
     
      //Start space adventure setup
     JLabel pictureSA = new JLabel(new ImageIcon(("Resources/Space_Adv/SPACE.png")));
-    pictureSA.setBounds(50, 450, 300, 188);
+     //Change to 225 from 175
+    pictureSA.setBounds(225, 450, 300, 188);
     panel.add(pictureSA);
     //Tooltip to talk about adventure
-     pictureSA.setToolTipText("Captains log: I've been abducted!! Abducted by strange aliens!! Can you return to Earth?!");
+     pictureSA.setToolTipText("Captains log: I've been abducted!! Abducted by strange aliens!! Can you return to Earth?! A difficult adventure for the seasoned explorer!");
     
     goSA = new JButton(new ImageIcon(("Resources/Main_Menu/buttongo.PNG")));
-    goSA.setBounds(175, 645, 50, 50);
+    //Change to 350 from 175
+    goSA.setBounds(350, 645, 50, 50);
     panel.add(goSA);
     
     //End space adventure setup
@@ -88,7 +95,8 @@ public class MainMenu extends State {
    //instantiate a button event handler
    ButtonHandler bh = new ButtonHandler();
   //Adds the buttonhandler to the buttons
-  goPA.addActionListener(bh);
+   //Take pirat out for now
+   //goPA.addActionListener(bh);
    goSA.addActionListener(bh);
     goJA.addActionListener(bh);
   

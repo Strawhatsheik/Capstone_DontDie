@@ -10,9 +10,12 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -30,11 +33,15 @@ public class Space extends State implements ActionListener{
     /**
      *
      */
-    public String boardTitlePA, boardTitleSA, boardTitleJA; //These will depend on  users choice?
+    public String boardTitlePA, boardTitleSA, boardTitleJA, playerName, mainString; //These will depend on  users choice?
      // If for statements dont work here, maybe make an array of buttons nd setup array in constructor? 
         //for(int i=1;i<=10;i++){  
        // System.out.println(i);  
        // }  
+    //Instead of naming eachbutton individually, lets use an array
+    Button buttons[];
+    Button[] buttonsp = new Button[15];
+   //buttons = new Button(10);
    Button sb1 = new Button((new ImageIcon(("Resources/Space_Adv/Image.png"))));
    Button sb2 = new Button((new ImageIcon(("Resources/Space_Adv/Image.png"))));
    Button sb3 = new Button((new ImageIcon(("Resources/Space_Adv/Image.png"))));
@@ -203,11 +210,17 @@ public class Space extends State implements ActionListener{
     public Space() {
         super("A Space Adventure!");
         tm.start();
-       //Prepares the starting scenario for use on this board  
-     level1.setMainEvent("You are _________, and you have just been abducted by aliens. You are sitting naked in your holding cell, cow tag hanging from your very sore ear. Yes, they have stolen you, a hapless college student, from your campus and are now keeping you here in their laboratories with hundreds of other creatures. Unfortunately for you, this doesn’t seem to be a friendly capture-and-release program; in fact you aren’t entirely sure these huge, many armed spacelings are scientifically inclined. You’ve seen what happens to their samples once their data is gathered…a large silver hatch that appears to reveal a long, dark chute. Your only chance is one of the small vessels you saw when they first sprayed you for germs and processed you; small crafts for the crew in the case of emergency…or for terrified kidnapped humans in case of an emergency. You have to steal an escape pod.\n" +
+        //retrieve player input for their adventurer's name
+       adventurer.setName(JOptionPane.showInputDialog("What is your name brave adventurer? "));
+          //set the entered name
+      playerName = adventurer.getName();
+   //prepare string for main event. Only needs to be done here to add player name
+          mainString =("You are ")+ playerName +(" and you have just been abducted by aliens. You are sitting naked in your holding cell, cow tag hanging from your very sore ear. Yes, they have stolen you, a hapless college student, from your campus and are now keeping you here in their laboratories with hundreds of other creatures. Unfortunately for you, this doesn’t seem to be a friendly capture-and-release program; in fact you aren’t entirely sure these huge, many armed spacelings are scientifically inclined. You’ve seen what happens to their samples once their data is gathered…a large silver hatch that appears to reveal a long, dark chute. Your only chance is one of the small vessels you saw when they first sprayed you for germs and processed you; small crafts for the crew in the case of emergency…or for terrified kidnapped humans in case of an emergency. You have to steal an escape pod.\n" +
     "To do that though, you’ll have to escape your cell, get past the scientists, get out of their lab, get past all the crew mates, and then figure out how to pilot an alien craft back to your home planet….and, side note, you’re still naked. \n" +
     "\n" + "You won’t get much time to plan your escape either. It’s morning, or what you suppose passes as morning, because this is when their shifts start. Two large purple creatures enter covered in their normal, giant suits, and today they’re coming for you. It’s your cage they approach, you’re information they appear to be reading on their glowing pads. The larger of the two begins typing on the wall and the door to your cell is open. He reaches in and wraps a firm grip around your arm. What do you do?");
-    //The text for the buttons in level 1
+   
+       //Prepares the starting scenario for use on this board  
+     level1.setMainEvent(mainString); //The text for the buttons in level 1
     level1.setGoodChoice("Stay calm, and leave your cell with them.");
     level1.setUglyChoice("Panic! Panic! Panic! Paaaniiiccc!");
     level1.setBadChoice("Pretend to comply, then make a mad break for the door!");
@@ -340,6 +353,8 @@ public class Space extends State implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            
+            
             if (e.getSource() == sb1 )
             { 
                 
